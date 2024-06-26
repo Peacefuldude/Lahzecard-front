@@ -30,7 +30,6 @@ const Trophies = () => {
                 />
                 {/* <img src={enamad} alt="enamad logo" /> */}
                 {/* <img src={samane} alt="sabt org logo" /> */}
-                {/* //nothing */}
             </section>
         </div>
     );
