@@ -82,7 +82,12 @@ import t from "../../../src/Multilanguage.jsx";
 // };
 function Footer() {
     return (
-        <div className="footer">
+        <div
+            className="footer"
+            style={{
+                direction: localStorage.language === 'ar' || localStorage.language === 'ir' ? 'rtl' : 'ltr',
+            }}
+        >
             <div className="footer-container">
                 <div className="footer-groups">
 
@@ -178,7 +183,14 @@ function Footer() {
                     </div>
                 </div>
 
-                <div className="footer-logo-icon">
+                <div
+                    className={`footer-logo-icon ${localStorage.language === "gr" || localStorage.language === "en" ? 'footer-logo-right' : 'footer-logo-left' }`}
+                    style={{
+                        // top: localStorage.language === 'ir' || localStorage.language === 'ar' ? -70 : 0,
+                        left: localStorage.language === 'ir' || localStorage.language === 'ar' ? 0 : undefined,
+                        right: localStorage.language === 'en' || localStorage.language === 'gr' ? 0 : undefined,
+                    }}
+                >
                     <Link to={'/home'}>
                         <svg width="250" height="220" viewBox="0 0 269 294" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <mask id="path-1-outside-1_772_2802" maskUnits="userSpaceOnUse" x="-1" y="0" width="270"
