@@ -23,6 +23,7 @@ const Navbar = () => {
         const { t, i18n } = useTranslation();
 
         const changeLanguage = (lng) => {
+            localStorage.setItem("language", lng);
           i18n.changeLanguage(lng);
           setOpen(!open)
           if (lng === 'ir' || lng === 'ar') {
@@ -41,6 +42,8 @@ const Navbar = () => {
     // url check
     const [pathIsHome, setPathIsHome] = useState(false);
     useEffect(() => {
+        localStorage.setItem("language", "ir");
+
         if (window.location.pathname === "/home") {
             setPathIsHome(!pathIsHome);
         }
