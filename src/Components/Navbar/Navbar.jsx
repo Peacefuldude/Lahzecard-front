@@ -29,7 +29,7 @@ const Navbar = () => {
 
   const languages = [
     { code: "FA", label: "ir", flag: IR },
-    { code: "EN", label: "en", flag: EN },
+    { code: "EN", label: "en-US", flag: EN },
     { code: "AR", label: "ar", flag: AR },
     { code: "DE", label: "gr", flag: DE },
   ];
@@ -66,6 +66,8 @@ const Navbar = () => {
     }
   };
   useEffect(() => {
+    console.log(i18n.language);
+    
     const handleResize = () => {
       setIsTabletOrSmaller(window.innerWidth <= 950);
     };
@@ -158,7 +160,6 @@ const Navbar = () => {
                     open ? styles.rotate : ""
                   }`}
                 />
-
                 {languages
                   .filter((lng) => lng.label === i18n.language)
                   .map((lng) => (

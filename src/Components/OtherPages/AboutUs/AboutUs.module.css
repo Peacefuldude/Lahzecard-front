@@ -15,8 +15,23 @@
   background-color: transparent;
 }
 
-.navbar_qnda_sec {
-    width: 100%;
+.container {
+  padding: 2rem 2rem 0;
+  background: linear-gradient(
+    to bottom,
+    #edc1f5 0%,
+    rgba(237, 193, 245, 0.7) 7%,
+    transparent 20%
+  );
+}
+.container > * {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .info p {
@@ -63,25 +78,16 @@
   font-weight: 700;
   font-size: 1.5rem;
 }
-@media (max-width: 950px) {
 
-    .main_qnada_sec{
-        width: 100%;
-        margin-top: 0;
-        border-radius: 0;
-        margin-bottom: 0;
-        padding-bottom: 7rem;
-    }
+.divider_text div {
+  font-weight: 700;
+  font-size: 1.5rem;
+  width: fit-content;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: white;
 }
-@media (max-width: 720px) {
-    .info_pic {
-        display: none;
-    }
-    .info_pic_for_phone {
-        display: block;
-        margin: 5% 0;
-    }
-}
+@media (max-width: 950px) {
 
 .staff_card {
   margin: 1rem;

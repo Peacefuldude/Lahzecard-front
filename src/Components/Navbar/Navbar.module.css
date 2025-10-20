@@ -34,6 +34,7 @@ nav {
   padding: 0.4rem;
   border-radius: 0.8rem;
   width: 5rem;
+  /* backdrop-filter: blur(4px); */
   order: -1;
 }
 .dropdown.open{
@@ -77,6 +78,7 @@ nav {
   left: 0;
   right: 0;
   background: #F3EDF780;
+  backdrop-filter: blur(4px);
   border-radius: 0.8rem;
   /* margin-top: 0.4rem; */
   max-height: 0;
